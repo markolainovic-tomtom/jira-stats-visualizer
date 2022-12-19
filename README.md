@@ -1,8 +1,16 @@
 # JIRA Stats Visualizer
 
-Just run `python main.py`.
+Calculate stats from JIRA issues and visualize them.
 
-Make sure your JIRA URL and API token are defined as `JIRA_URL` and `JIRA_API_TOKEN` environment variables.
+Current features:
+
+- [Boxplot](https://en.wikipedia.org/wiki/Box_plot): Cycle-time (in days) distribution vs story-points.
+
+## Usage
+
+As an example, run `python main.py`.
+
+Make sure that JIRA URL and API token are defined as `JIRA_URL` and `JIRA_API_TOKEN` environment variables.
 
 For additional info, you can specify the log level, e.g.:
 
@@ -18,4 +26,4 @@ python main.py --log [info|debug]
 
 ###### Jira-Dora
 
-A bulk of the code for handling Jira requests has been taken from Jira-dora repo. You can see it [here](https://github.com/celeborne/jira-dora).
+A bulk of the code for handling Jira requests has been taken from [here](https://github.com/celeborne/jira-dora).
