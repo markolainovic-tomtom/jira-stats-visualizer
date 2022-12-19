@@ -21,7 +21,7 @@ Make sure that JIRA URL and API token are defined as `JIRA_URL` and `JIRA_API_TO
 For additional info, you can specify the log level, e.g.:
 
 ```python
-python main.py --log [info|debug]
+python example.py --log [info|debug]
 ```
 
 ### Changelog
