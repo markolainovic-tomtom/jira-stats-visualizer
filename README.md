@@ -13,3 +13,9 @@ python main.py --log [info|debug]
 ### Changelog
 
 **v0.1**: Add plottng cycle-time vs story-points and saving the result as a .png image.
+
+## Credits
+
+###### Jira-Dora
+
+A bulk of the code for handling Jira requests has been taken from Jira-dora repo. You can see it [here](https://github.com/celeborne/jira-dora).
