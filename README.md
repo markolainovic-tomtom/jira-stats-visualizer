@@ -8,7 +8,13 @@ Current features:
 
 ## Usage
 
-As an example, run `python main.py`.
+Install the required packages via:
+
+```python
+pip install requirements.txt
+```
+
+Then, as an example, run `python example.py`.
 
 Make sure that JIRA URL and API token are defined as `JIRA_URL` and `JIRA_API_TOKEN` environment variables.
 
