@@ -1,6 +1,6 @@
 # JIRA Stats Visualizer
 
-Calculate stats from JIRA issues and visualize them.
+Calculate stats from JIRA issues for a particular team and visualize them.
 
 Current features:
 
@@ -16,7 +16,10 @@ pip install requirements.txt
 
 Then, as an example, run `python example.py`.
 
-Make sure that JIRA URL and API token are defined as `JIRA_URL` and `JIRA_API_TOKEN` environment variables.
+Make sure that:
+
+- JIRA URL and JIRA API token are defined as `JIRA_URL` and `JIRA_API_TOKEN` environment variables.
+- Have a proper value for `team_code` (equal to the `Team` field value in JIRA issues) in the `config.py` file.
 
 For additional info, you can specify the log level, e.g.:
 
