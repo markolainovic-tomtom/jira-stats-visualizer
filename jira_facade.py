@@ -27,11 +27,10 @@ class JiraFacade:
         self.jira = Jira(url=jira_url, token=api_token, cloud=False)
         self.team_code = team_code
 
-    def fetch_all_issues(self, story_points: int = 3, months_ago: int = 6) -> List[str]:
+    def fetch_issues(self, story_points: int = 3, months_ago: int = 6) -> List[str]:
         cls = self.__class__
         query = f"""
         team = {self.team_code}
-         AND issuetype = 'User Story'
          AND 'Story Points' = {story_points}
          AND resolved > startOfDay(-{months_ago}M)
          AND status = Done

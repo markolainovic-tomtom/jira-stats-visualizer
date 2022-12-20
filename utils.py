@@ -32,11 +32,12 @@ def init_argparser():
     logger = logging.getLogger(__name__)
 
 
-def save_cycle_times_stats_image(jira_client: JiraFacade, story_points, months_ago):
-    issues = jira_client.fetch_all_issues(story_points, months_ago)
+def save_cycle_time_boxplot(jira_client: JiraFacade, story_points, months_ago, ylims):
+    issues = jira_client.fetch_issues(story_points, months_ago)
     logging.info(
         f"Number of {story_points} SP issues in the past {months_ago} months: {len(issues)}.")
     cycle_times = jira_client.get_cycle_times(issues)
     logging.info(f"Cycle times in days: {cycle_times}.")
     plotter = BoxPlotter(cycle_times)
-    plotter.plot(f"Cycle times vs story points ({story_points})")
+    plotter.plot(
+        title=f"Cycle time for {story_points}SP issues", ylabel="Days", ylims=ylims)
