@@ -47,7 +47,7 @@ class JiraFacade:
         res = self.jira.jql(jql=query, limit=0)
         if type(res) is not dict:
             raise JiraException(
-                "The response from JIRA is not a valid dictionary.. Check your authentication credentials.")
+                "The response from JIRA is not a valid dictionary. Check your authentication credentials, if you need to be on/off VPN, etc.")
         total_issues_count = res["total"]
         logging.info(f"Query returned {total_issues_count} issues.")
 
